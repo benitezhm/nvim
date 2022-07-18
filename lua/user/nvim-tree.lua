@@ -42,7 +42,7 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  --auto_close = true,
+  auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
@@ -110,4 +110,4 @@ nvim_tree.setup {
   --  tree_width = 30,
   --},
 }
-
+vim.cmd[[highlight NvimTreeCursorLine guibg=#444454 guifg=#F8F8FF ctermfg=189 ctermbg=240 cterm=none]]
