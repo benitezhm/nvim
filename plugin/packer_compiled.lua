@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/miguelbenitez/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "/Users/miguelbenitez/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/miguelbenitez/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

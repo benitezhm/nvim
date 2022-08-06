@@ -42,7 +42,6 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
@@ -110,4 +109,12 @@ nvim_tree.setup {
   --  tree_width = 30,
   --},
 }
+vim.api.nvim_create_autocmd("BufEnter", {
+  nested = true,
+  callback = function()
+    if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
+      vim.cmd "quit"
+    end
+  end
+})
 vim.cmd[[highlight NvimTreeCursorLine guibg=#444454 guifg=#F8F8FF ctermfg=189 ctermbg=240 cterm=none]]
