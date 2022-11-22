@@ -19,7 +19,6 @@ end
 vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
