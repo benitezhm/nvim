@@ -50,7 +50,7 @@ local on_attach = function(_, bufnr)
   vim.cmd [[inoremap <silent><expr> <C-d> compe#scroll({ 'delta': -4 })]]
 
   -- tell nvim-cmp about our desired capabilities
-  require("cmp_nvim_lsp").update_capabilities(capabilities)
+  require("cmp_nvim_lsp").default_capabilities(capabilities)
 end
 
 

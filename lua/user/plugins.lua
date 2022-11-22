@@ -19,6 +19,7 @@ end
 vim.cmd [[
   augroup packer_user_config
     autocmd!
+    autocmd BufWritePre * undojoin | Neoformat
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
@@ -107,6 +108,8 @@ return packer.startup(function(use)
   }
   -- winbar
   -- use { 'fgheng/winbar.nvim' }
+  -- formating code plugin
+  use "sbdchd/neoformat"
 
 
   -- Automatically set up your configuration after cloning packer.nvim
