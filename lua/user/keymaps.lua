@@ -6,7 +6,7 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
+--Remap semicolon as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
@@ -39,6 +39,11 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- close buffer
 keymap("n", "<C-x>", ":Bdelete!<CR>", opts)
+
+-- gitsigns
+keymap('n', '<leader>hb', ":Gitsigns blame_line {full=true} <CR>", opts)
+keymap('n', '<leader>tb', ":Gitsigns toggle_current_line_blame<CR>", opts)
+keymap('n', '<leader>hd', ":Gitsigns diffthis<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>", opts)
