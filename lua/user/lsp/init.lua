@@ -24,7 +24,7 @@ local on_attach = function(_, bufnr)
   local map_opts = {noremap = true, silent = true}
 
   map("n", "df", "<cmd>lua vim.lsp.buf.formatting()<cr>", map_opts)
-  map("n", "gd", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>", map_opts)
+  map("n", "gd", "<cmd>lua vim.diagnostic.open_float({scope='line'})<cr>", map_opts)
   map("n", "dt", "<cmd>lua vim.lsp.buf.definition()<cr>", map_opts)
   map("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", map_opts)
   map("n", "gD", "<cmd>lua vim.lsp.buf.implementation()<cr>", map_opts)
